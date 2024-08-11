@@ -113,8 +113,8 @@
     <div class="container">
       <div class="row first-row">
         <div class="image-container">
-          <img src="image.jpg" alt="About Us Image" />
-          <img src="wlogo.png" class="logo" alt="Logo" />
+          <img src=" {{url_for('static', filename='image.jpg')}}" alt="About Us Image" />
+          <img src="{{url_for('static', filename='wlogo.png')}}" class="logo" alt="Logo" />
           <div class="overlay-text top-left">A RELIABLE DESTINATION FOR</div>
           <div class="overlay-text center">COMPREHENSIVE HEALTH SERVICE</div>
           <div class="overlay-text bottom-left">NEPAL HAMRO HOSPITAL</div>
