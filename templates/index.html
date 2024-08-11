@@ -35,7 +35,71 @@
         color: black;
         border: 2px solid black;
         border-radius: 25px;
+      }
 
+      .carousel-item {
+        height: 60vh; 
+        position: relative;
+      }
+      .carousel-item img {
+        height: 100%;
+        object-fit: cover; 
+        width: 100%; 
+      }
+      .carousel-caption {
+        position: absolute;
+        top: 40%; 
+        left: 30%;
+        transform: translate(-50%, -50%);
+        padding: 20px; 
+        width: 80%; 
+        max-width: 600px; 
+        box-sizing: border-box; 
+        text-align: center; 
+      }
+      .carousel-caption h1 {
+        font-size: 2rem; 
+        margin-bottom: 0.5rem;
+      }
+      .carousel-caption p {
+        font-size: 1rem;
+        margin-bottom: 0; 
+      }
+
+      @media (max-width: 992px) {
+        .carousel-item {
+          height: 50vh;
+        }
+        .carousel-caption h1 {
+          font-size: 1.75rem; 
+        }
+        .carousel-caption p {
+          font-size: 0.875rem; 
+        }
+      }
+
+      @media (max-width: 768px) {
+        .carousel-item {
+          height: 40vh; 
+        }
+        .carousel-caption h1 {
+          font-size: 1.5rem; 
+        }
+        .carousel-caption p {
+          font-size: 0.75rem; 
+        }
+      }
+
+      @media (max-width: 576px) {
+        .carousel-item {
+          height: 30vh; 
+        }
+        .carousel-caption h1 {
+          font-size: 1.25rem; 
+        }
+        .carousel-caption p {
+          font-size: 0.625rem;
+        }
       }
     </style>
   </head>
@@ -85,6 +149,134 @@
       </div>
     </nav>
     <!-- Navbar end -->
+
+    <!-- Carosual start -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="{{url_for('static', filename='1.jpg')}}"
+            class="d-block"
+            alt="First image showing Hamro Hospital"
+            loading="lazy"
+          />
+          <div class="carousel-caption">
+            <h1 style="font-size: 70px; color: black; font-weight: bold">
+              We are here <br />for your Care
+            </h1>
+            <p style="color: rgba(0, 0, 0, 0.652)">
+              At Hamro Hospital, we are committed to providing exceptional healthcare services to
+              our community. As a leading medical facility, our mission is to advanced medical
+              treatments, and a patient-centered approach that puts your health and well-being
+              first.
+            </p>
+            <div>
+              <button type="button" class="btn btn-primary mt-4 border border-info rounded">
+                Doctor appointment
+              </button>
+              <button type="button" class="btn btn-primary mt-4 border border-info rounded">
+                AI Doctor
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{{url_for('static', filename='2.jpg')}}"
+            class="d-block"
+            alt="Second image showcasing medical facilities"
+            loading="lazy"
+          />
+          <div class="carousel-caption">
+            <h1 style="font-size: 70px; color: black; font-weight: bold">
+              We are here <br />for your Care
+            </h1>
+            <p style="color: rgba(0, 0, 0, 0.652)">
+              At Hamro Hospital, we are committed to providing exceptional healthcare services to
+              our community. As a leading medical facility, our mission is to advanced medical
+              treatments, and a patient-centered approach that puts your health and well-being
+              first.
+            </p>
+            <div>
+              <button type="button" class="btn btn-primary mt-4 border border-info rounded">
+                Doctor appointment
+              </button>
+              <button type="button" class="btn btn-primary mt-4 border border-info rounded">
+                AI Doctor
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{{url_for('static', filename='3.jpg')}}"
+            class="d-block"
+            alt="Third image highlighting patient care"
+            loading="lazy"
+          />
+          <div class="carousel-caption">
+            <h1 style="font-size: 70px; color: black; font-weight: bold">
+              We are here <br />for your Care
+            </h1>
+            <p style="color: rgba(0, 0, 0, 0.652)">
+              At Hamro Hospital, we are committed to providing exceptional healthcare services to
+              our community. As a leading medical facility, our mission is to advanced medical
+              treatments, and a patient-centered approach that puts your health and well-being
+              first.
+            </p>
+            <div>
+              <button type="button" class="btn btn-primary mt-4 border border-info rounded">
+                Doctor appointment
+              </button>
+              <button type="button" class="btn btn-primary mt-4 border border-info rounded">
+                AI Doctor
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Carosual end -->
 
     <h1 class="text-center mt-4">Hamro Hospital</h1>
 
