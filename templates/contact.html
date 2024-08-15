@@ -18,7 +18,7 @@
       @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
       .container {
-        width: 70%;
+        width: 100%;
         padding: 30px;
         border-radius: 0;
         position: absolute;
@@ -61,6 +61,145 @@
           top: 90%;
         }
       }
+      /* Footer Styles */
+.footer {
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 0px;
+  margin: 0px;
+}
+
+.footer-row {
+  display: flex;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  height: 300px;
+  flex-wrap: wrap;
+  color: rgb(43, 112, 112);
+}
+
+.footer-column {
+  padding: 0px;
+  background-color: #ece7e7;
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.column-1, .column-4 {
+  width: 30%;
+  
+ 
+}
+
+.column-2, .column-3, .h1 {
+  width: 20%;
+ flex-direction: column;
+ flex-wrap: wrap;
+  
+}
+
+/* First Column Specific Styling */
+.column-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  /* margin-bottom: 20px; */
+}
+
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin-top: 10px;
+  /* padding: 10px; */
+
+}
+.h1{
+  align-items: center;
+}
+
+.logo-text {
+  text-align: justify;
+  text-align: center;
+}
+/* Second Column Specific Styling */
+.quick-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quick-list li {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.quick-list a {
+  text-decoration: none;
+  color: rgb(43, 112, 112);
+}
+
+/* Third Column Specific Styling */
+.icon-item {
+  display: flex;
+  align-items: center; /* Vertically centers the content */
+  margin-bottom: 10px;
+  height: 60px;
+  margin-left: 20px;
+}
+
+.icon-image {
+   /* Adjust size as needed */
+  height: 20px;
+  margin-right: 10px;
+  
+}
+
+.image-item p {
+  margin: 0;
+}
+
+/* Second Row Styles */
+.footer-second-row {
+  width: 100%;
+  height: 100px;
+  background-color: #e3d8d8;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: rgb(43, 112, 112);
+  font-size: 25px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .footer-row {
+      flex-direction: column;
+      height: auto;
+  }
+
+  .footer-column {
+      width: 100%;
+  }
+
+  .footer-second-row {
+      height: auto;
+      padding: 20px;
+      line-height: normal;
+  } 
+  .column-2, .column-3, .icon-item, .column-4{
+    text-align: center;
+    justify-content: center;
+  align-items: center;
+  }
+
+}
+
+
     </style>
   </head>
   <body>
@@ -119,7 +258,64 @@
           </div>
         </div>
       </div>
+      <div class="footer">
+        <!-- First Row -->
+        <div class="footer-row">
+          <!-- First Column with Two Rows -->
+          <div class="footer-column column-1">
+            <!-- First Row in First Column -->
+            <div class="column-content">
+              <img src="{{url_for('static', filename='wlogo.png')}}" alt="Logo" class="logo" />
+              <h1>Hamro Hospital</h1>
+            </div>
+            <!-- Second Row in First Column -->
+            <div class="logo-text">
+              <p>
+                Healing Together,Every Step: Excellence in Care, Always There.
+              </p>
+            </div>
+          </div>
+          <!-- Second Column -->
+          <div class="footer-column column-2">
+            <h1>Quick Link</h1>
+            <ul class="quick-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <!-- Third Column -->
+          <div class="footer-column column-3">
+            <h1>Contact Info</h1>
+            <div class="icon-item">
+              <img src="{{url_for('static', filename='location.png')}}" alt="location" class="icon-image" />
+              <div>Address: Dhangadhi-05, Hasanpur, Kailali, Nepal</div>
+            </div>
+            <div class="icon-item">
+              <img src="{{url_for('static', filename='phone.png')}}" alt="phone" class="icon-image" />
+              <p>Contact: 9845129856</p>
+            </div>
+            <div class="icon-item">
+              <img src="{{url_for('static', filename='email.png')}}" alt="Email" class="icon-image" />
+              <p>Email: info@hamrohospital.com</p>
+            </div>
+          </div>
+          <!-- Fourth Column -->
+          <div class="footer-column column-4">
+            <h1>Appoinment</h1>
+            <p>Content for the fourth column.</p>
+          </div>
+        </div>
+  
+        <!-- Second Row -->
+        <div class="footer-second-row">
+          <p>
+            Copyright &#169; 2024 Hamro Hospital ! Powered By Hamro Hospital !
+          </p>
+        </div>
+      </div>
     </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
