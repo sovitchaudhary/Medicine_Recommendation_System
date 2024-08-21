@@ -108,7 +108,7 @@
   /* about section style */
  
 
-  .container {
+  .box {
     width: 100%;
     margin: 0px;
     padding: 0px;
@@ -119,7 +119,7 @@
     background-color: white;
   }
 
-  .row {
+  .pahilo {
     display: flex;
     flex-wrap: wrap;
   }
